@@ -1,0 +1,47 @@
+//NOT FINISHED 
+/* Problem 3
+Write a program which reads from the user three non-negative integers and then
+prints, using symbols ’*’, a ‘histogram’ of the data represented by the numbers, i.e.,
+three vertical bars, aligned at the bottom, with heights equal to the values of the
+three numbers.
+For example, the execution of the program could look like this:
+$ ./histo
+Enter three non-negative numbers: 3 1 8
+*
+*
+*
+*
+*
+* *
+* *
+***
+$
+Do not use arrays, strings or any other kind of collections.*/
+
+#include "pch.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	int first;
+	int second;
+	int third;
+	cout << "Please enter only non-negatove numbers" << endl;
+	cin >> first;	cin >> second; cin >> third;
+	for (size_t i = 0; i < first; i++)
+	{
+		cout << "*" << endl;
+	}
+
+	for (size_t i = 0; i < second; i++)
+	{
+		cout << "*" << endl;
+	}
+	
+	for (size_t i = 0; i < third; i++)
+	{
+		cout << "*" << endl;
+	}
+
+	system("pause");
+}
