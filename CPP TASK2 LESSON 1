@@ -1,0 +1,58 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	
+
+	int value;
+	int value2;
+	int value3;
+	int Min;
+	int Max;
+	cin >> value;
+	cin >> value2;
+	cin >> value3;
+	if (value>value2 && value>value3)
+	{
+		Max = value;
+		if (value2 > value3) {
+			Min = value3;
+		}
+		else if (value3 > value2) {
+			Min = value2;
+				
+		}
+		
+	}
+	else if (value2 > value && value2 > value3)
+	{
+		Max = value2;
+		if (value > value3) {
+			Min = value3;
+		}
+		else if (value3 > value) {
+			Min = value;
+
+		}
+
+	}
+	else if (value3 > value && value3 > value2)
+	{
+		Max = value3;
+		if (value > value2) {
+			Min = value2;
+		}
+		else if (value2 > value) {
+			Min = value;
+
+		}
+
+	}
+	cout << " Max is : " << endl;
+	cout << Max << endl;
+	cout << " Min is : " << endl;
+	cout << Min << endl;
+
+	system("pause");
+}
