@@ -18,26 +18,55 @@ Enter three non-negative numbers: 3 1 8
 $
 Do not use arrays, strings or any other kind of collections.*/
 
-#include "pch.h"
 #include <iostream>
 using namespace std;
 int main()
 {
-	int first;
-	int second;
-	int third;
+	int a=0;
+	int b=0;
+	int c=0;
 	cout << "Please enter only non-negatove numbers" << endl;
-	cin >> first;	cin >> second; cin >> third;
-	for (size_t i = 0; i < first; i++)
-	{
-		cout << "*" << endl;
-	}
+	cin >> a>> b; cin >> c;
+	int max = 0;
 
-	for (size_t i = 0; i < second; i++)
+	if (a > b&&a > c)
 	{
-		cout << "*" << endl;
+		max = a;
+	}if (b > a&&b > c)
+	{
+		max = b;
+	}if (c > a&&c > b)
+	{
+		max = c;
+	}
+	//FOUND MAX
+	for (int s = max; s > 0; s--)
+	{
+		if (s <= a) {
+			cout << " * " << endl;
+		}
+		else {
+			cout << "   " << endl;
+
+		}if (s <= b) {
+			cout << " * " << endl;
+
+		}
+		else {
+			cout << "   " << endl;
+
+		}if (s <= c)
+		{
+			cout << " * " << endl;
+		}
+		else {
+			cout << "   ";
+
+		}
 	}
 	
+	system("pause");
+}
 	for (size_t i = 0; i < third; i++)
 	{
 		cout << "*" << endl;
