@@ -26,9 +26,41 @@ T maxel(const T* a, size_t size) {
 	return index;
 }
 int main() {
-	
+	//trying for int
 	int  ax[] = { 4,5,0,6,7,2 };
 	int resutOfInts = maxel(ax, 6);
 	cout << resutOfInts << endl;
+	//trying for double
+	double  ax[] = { 4.6,.5,0,6,7.3,2 };
+	double resutOfDs = maxel(ax, 6);
+	cout << resutOfDs << endl;
+	//trying for string
+	/*
+	//Write a template of a function which, given an array of elements of an arbitrary type????????
+template<typename T>
+int maxel(const T* a, size_t size) {
+	//we chaned from t to int because what we return is int
+	T tmp = a[0];
+	int index = 0;
+	for (size_t i = 1; i < size; i++)
+	{
+		if (a[i] > tmp) {
+			tmp = a[i];
+			index = i;
+		
+		}
+	}
+	return index;
+}
+int main() {
+	
+	string  ax[] = { "a","b","c"};
+	int resutOfInts = maxel(ax, 3);
+	//it isnot string but int
+	cout << resutOfInts << endl;
+
+
+}*/
 
 }
+
