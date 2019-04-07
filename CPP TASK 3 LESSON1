@@ -1,4 +1,4 @@
-//NOT FINISHED 
+
 /* Problem 3
 Write a program which reads from the user three non-negative integers and then
 prints, using symbols ’*’, a ‘histogram’ of the data represented by the numbers, i.e.,
@@ -43,34 +43,28 @@ int main()
 	for (int s = max; s > 0; s--)
 	{
 		if (s <= a) {
-			cout << " * " << endl;
+			cout << " * " ;
 		}
 		else {
-			cout << "   " << endl;
+			cout << "   ";
 
 		}if (s <= b) {
-			cout << " * " << endl;
+			cout << " * " ;
 
 		}
 		else {
-			cout << "   " << endl;
+			cout << "   " ;
 
 		}if (s <= c)
 		{
-			cout << " * " << endl;
+			cout << " * ";
 		}
 		else {
 			cout << "   ";
 
 		}
+		cout << " "<< endl;
 	}
 	
-	system("pause");
-}
-	for (size_t i = 0; i < third; i++)
-	{
-		cout << "*" << endl;
-	}
-
 	system("pause");
 }
