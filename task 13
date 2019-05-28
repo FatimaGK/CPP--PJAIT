@@ -1,17 +1,4 @@
 
-Conversation opened. 1 unread message.
-
-Skip to content
-Using PJWSTK Mail with screen readers
-
-Conversations
-Using 0.43 GB
-Manage
-Programme Policies
-Powered by Google
-Last account activity: 26 minutes ago
-Details
-
 #include<iostream>
 #include<algorithm>
 using namespace std;
@@ -82,5 +69,4 @@ int main() {
 
 	system("pause");
 }
-Source.cpp
-Displaying Source.cpp.
+
