@@ -1,0 +1,86 @@
+
+Conversation opened. 1 unread message.
+
+Skip to content
+Using PJWSTK Mail with screen readers
+
+Conversations
+Using 0.43 GB
+Manage
+Programme Policies
+Powered by Google
+Last account activity: 26 minutes ago
+Details
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+class Segment {
+public:double A, B;
+public:
+	Segment(double A, double B) : A(A), B(B) { }
+
+
+	Segment operator*(double d) const { return Segment(this->A*d, this->B*d);}
+
+	Segment operator/(double d) const { return Segment(this->A/d, this->B/d);}
+
+	Segment operator+(double d) const { return Segment(this->A + d, this->B + d);}
+
+	Segment operator-(double d) const { return Segment(this->A - d, this->B - d);}
+
+	Segment operator+(Segment seg) {return Segment(min(A, seg.A), max(B, seg.B));}
+
+	bool operator()(double d) { return d >= A && d <= B ? true : false; }
+
+	friend ostream& operator<<(ostream&, const Segment&);
+};
+
+Segment operator*(double d,const Segment &seg) {
+	return seg*d;
+}
+
+Segment operator/(double d, const Segment &seg) {
+	return seg /d;
+}
+
+
+Segment operator+(double d, const Segment &seg) {
+	return seg+d;
+}
+
+
+ostream& operator<<(ostream& str, const Segment& seg) {
+
+	return str << "["<<seg.A<<","<<seg.B<<"]";
+
+}
+
+int main() {
+	/*Segment seg(4, 6);
+	Segment seg2(7, 9);
+	double d = 5;
+
+	seg = seg * d;
+	cout << seg.A << " " << seg.B << endl;
+
+	seg = d * seg;
+	cout << seg.A << " " << seg.B << endl;
+
+	seg = seg2 + seg;
+	cout << seg.A << " " << seg.B << endl;
+
+	cout << seg2(d) << endl;*/
+
+	Segment seg3{ 2,3 }, s = 1 + 2 * ((seg3 - 2) / 2 + seg3) / 3;
+
+	cout << s<< endl<< boolalpha;
+
+	for (double x = 0.5; x < 4; x += 1)
+		cout << "x=" << x << ": " << s(x) << endl;
+
+	system("pause");
+}
+Source.cpp
+Displaying Source.cpp.
