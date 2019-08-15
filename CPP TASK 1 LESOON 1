@@ -1,24 +1,32 @@
-/*Problem 1
-Write a program which asks the user to enter his/her height (in meters, as double)
-and the weight (in kilograms, also as a double). Then the program should print
-his/her BMI coefficient (body mass index ) defined as the weight in kilograms divided
-by the square of height in meters — this number should come out close to 20.*/
-//int add2(int i);
-
 #include <iostream>
+#include <string>
 using namespace std;
+
 int main()
-	{
-		double height ,weight,bmi;
-		cout << "Enter a value for weight in kg " << endl;
+{
 
-		cin >> weight;
-		cout << "Enter a value for height in meter " << endl;
-		cin >> height;
+	/* Write a program which asks the user to enter his / her height(in meters, as double)
+	and the weight(in kilograms, also as a double).Then the program should print
+	his / her BMI coefficient(body mass index) defined as the weight in kilograms divided
+	by the square of height in meters — this number should come out close to 20.
+	*/
 
-		bmi = (weight) / (height*height);
-		cout << "Your bmi is: " << endl;
+	cout << "please enter your weight in kg";
+	double weight;
+	cin >> weight;
+	cout << "please enter your height in m";
+	double height;
+	cin >> height;
 
-		cout << bmi << endl;
-			system("pause");
+	double bmi = weight / (height*height);
+
+
+	if (bmi < 18)
+		cout << " eat some food\n";
+	else if (bmi > 25)
+		cout << "eat less ";
+	else if (18 > bmi < 25)
+		cout << "doing good ";
+	system("pause");
 }
+	 
